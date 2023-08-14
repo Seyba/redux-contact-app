@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import {Routes, Route} from 'react-router-dom';
+
 import './App.css';
+import { Playground } from './components/Playground';
+import { HeroSection } from './components/HeroSection';
+import { Panel } from './components/Panel';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto ">
+      <HeroSection/>
+      <Panel/>
+      {/* <div className="container bg-slate-400 px-4">
+        <h2>Hello</h2>
+        <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
+      </div>
+      <div className="container bg-slate-100">
+        <div className="container bg-slate-200">
+          <h2>Hello</h2>
+          <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
+        </div>
+        <div className="container bg-slate-400">
+          <h2>Hello</h2>
+          <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
+        </div>
+      </div> */}
+
+      {/* <Navbar />
+
+      <Routes>
+
+        <Route path='/' element={<HomePage />} />
+        <Route path='/posts/:id' element={<PostPage />}/>
+        <Route path='/posts/edit/:id' element={<EditPostPage />}/>
+
+        <Route path='*' element={<NotFound />}/>
+
+      </Routes> */}
     </div>
   );
 }

@@ -11,15 +11,17 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { Navbar } from "./components/Navbar";
 import { Panel } from "./components/Panel";
+import { HeroSection } from "./components/HeroSection";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div className="bg-gradient-to-r from-cyan-500 to-blue-500 ...">  
+  <div >  
     <React.StrictMode>
       <Provider store={store}>
         <Router>
-          <Navbar/>
-          <App />
+          {/* <Navbar/> */}
+          <App /> 
+          {/*<HeroSection/>*/}
         </Router>
       </Provider>
     </React.StrictMode>

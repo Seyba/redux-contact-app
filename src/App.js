@@ -2,14 +2,23 @@ import {Routes, Route} from 'react-router-dom';
 
 import './App.css';
 import { Playground } from './components/Playground';
+import { HomePage } from './pages/HomePage';
+import { NotFoundPage } from './pages/NotFoundPage'
 import { HeroSection } from './components/HeroSection';
 import { Panel } from './components/Panel';
+import { SideNav } from './components/Sidenav';
+import { EditContactPage } from './pages/EditContactPage';
+import { ContactPage } from './pages/ContactPage';
+import { CreateContactPage } from './pages/CreateContactPage';
 
 function App() {
   return (
-    <div className="container mx-auto ">
-      <HeroSection/>
-      <Panel/>
+    <div className="">
+      <HomePage />
+      {/* <SideNav/> */}
+      
+      {/* <Panel/> */}
+      
       {/* <div className="container bg-slate-400 px-4">
         <h2>Hello</h2>
         <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
@@ -25,17 +34,15 @@ function App() {
         </div>
       </div> */}
 
-      {/* <Navbar />
+      
 
       <Routes>
-
         <Route path='/' element={<HomePage />} />
-        <Route path='/posts/:id' element={<PostPage />}/>
-        <Route path='/posts/edit/:id' element={<EditPostPage />}/>
-
-        <Route path='*' element={<NotFound />}/>
-
-      </Routes> */}
+        <Route path='/contacts/:id' element={<ContactPage />}/>
+        <Route path='/contacts/edit/:id' element={<EditContactPage />}/>
+        <Route path='/contacts/create' element={<CreateContactPage/>}/>
+        <Route path='*' element={<NotFoundPage />}/>
+      </Routes> 
     </div>
   );
 }

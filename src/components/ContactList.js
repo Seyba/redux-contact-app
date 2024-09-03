@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 
-export const ContactList = () => {
+export  function ContactList() {
     const contacts = useSelector(state => state.contacts)
-    console.log(contacts)
+    
     return(
         <div>
-            <h3>Contacts</h3>
-            {contacts.length}
+            <h3>Contact List</h3>
         </div>
     )
 }

@@ -13,8 +13,7 @@ import { CreateContactPage } from './pages/CreateContactPage';
 
 function App() {
   return (
-    <div className="">
-      <HomePage />
+    <div className="mx-auto md:w-2/4 w-full">
       {/* <SideNav/> */}
       
       {/* <Panel/> */}

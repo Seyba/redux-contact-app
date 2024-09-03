@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addContact } from '../redux/slices/contactsSlice'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const ContactForm = () => {
     const dispatch = useDispatch()
+    const navigate  = useNavigate()
 
     const [formData, setFormData] = useState({
         name:"",
@@ -19,18 +20,21 @@ export const ContactForm = () => {
             [e.target.name]: e.target.value
         })
     }
-    
+    const cts = localStorage.getItem('contacts')
+    console.log(cts)
     const handleSubmit = e => {
         e.preventDefault()
 
         dispatch(addContact(formData.name, formData.phone, formData.email, formData.address))
-
+        
         setFormData({
             name:"",
             phone:0,
             email:"",
             address:""
         })
+
+        navigate('/')
     }
     return(
         <div>

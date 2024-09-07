@@ -4,8 +4,8 @@ const contactsSlice = createSlice({
     name: "contacts",
 
   initialState: [
-    { id: 239, name: "John Doe", phone: 1234567890, email:'john@doe.com', address:'123 city 12345' },
-    { id: 239, name: "jane Doe", phone: 1098765432, email:'jane@doe.com', address:'432 drive 65403' },
+    { id: 'sk3i', name: "John Doe", phone: 1234567890, email:'john@doe.com', address:'123 city 12345' },
+    { id: 'bae9', name: "jane Doe", phone: 1098765432, email:'jane@doe.com', address:'432 drive 65403' },
   ],
   
   reducers : {
@@ -26,9 +26,20 @@ const contactsSlice = createSlice({
                 }
             }
         }
+    },
+    editContact: (state, action) => {
+        const {payload} = action 
+        const indexOfContact = state.findIndex(contact => contact.id === payload.id)
+        state[indexOfContact] = payload
+        //state.splice(indexOfContact, 1, payload)
+    },
+    deleteContact : (state, action) => {
+        const {payload} = action 
+        const contactIndex = state.findIndex(contact => contact.id === payload.id)
+        state.splice(contactIndex, 1)
     }
   }
 })
 
-export const { addContact } = contactsSlice.actions
+export const { addContact, editContact, deleteContact } = contactsSlice.actions
 export default contactsSlice.reducer

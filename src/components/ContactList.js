@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
+import { ContactItem } from './ContactItem'
 
-export  function ContactList() {
+export  function ContactList(props) {
     const contacts = useSelector(state => state.contacts)
-    
+    console.log(contacts.length)
     return(
         <div>
-            <h3>Contact List</h3>
+            {
+                contacts.map(contact => <ContactItem contact={contact}/>)
+            }
         </div>
     )
 }

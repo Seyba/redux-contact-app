@@ -10,6 +10,7 @@ import { SideNav } from './components/Sidenav';
 import { EditContactPage } from './pages/EditContactPage';
 import { ContactPage } from './pages/ContactPage';
 import { CreateContactPage } from './pages/CreateContactPage';
+import { ContactDetails } from './components/ContactDetails';
 
 function App() {
   return (
@@ -37,8 +38,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/contacts/:id' element={<ContactPage />}/>
         <Route path='/contacts/edit/:id' element={<EditContactPage />}/>
+        <Route path="/contacts/:id" element={<ContactDetails/>}/>
         <Route path='/contacts/create' element={<CreateContactPage/>}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes> 

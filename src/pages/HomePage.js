@@ -14,7 +14,7 @@ export const HomePage = () => {
                 </div>
                 
             </form>
-            <h3>contact list</h3>
+            <ContactList/>
         </div>
     )
 }

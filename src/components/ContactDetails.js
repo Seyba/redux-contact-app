@@ -1,16 +1,25 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { useParams, Link } from 'react-router-dom'
-
+import { useSelector, useDispatch } from 'react-redux'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+import { deleteContact } from '../redux/slices/contactsSlice'
 
 
 export const ContactDetails = props => {
     const {id} = useParams()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const history = useNavigate()
+
     const contacts = useSelector(state => state.contacts)
     const contact = contacts.find(contact => contact.id === id)
     const { name, phone, email, address} = contact
     
     const nameInitial = name.split('')[0]
+
+    const removeContact = () => {
+        dispatch(deleteContact(id))
+        navigate('/')
+    }
   return (
     <div className="py-8">
         <div className="bg-gray-300 py-4 px-2">
@@ -42,8 +51,9 @@ export const ContactDetails = props => {
             </div>
         </div>
         <div>
-            <Link className="text-red-700">Delete Contact</Link>
+            <button className="text-red-700" onClick={removeContact}>delete</button>
         </div>
+        
     </div>
   )
 }

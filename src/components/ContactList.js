@@ -4,11 +4,10 @@ import { ContactItem } from './ContactItem'
 
 export  function ContactList(props) {
     const contacts = useSelector(state => state.contacts)
-    console.log(contacts.length)
     return(
         <div>
             {
-                contacts.map(contact => <ContactItem contact={contact}/>)
+                contacts.map(contact => <ContactItem key={contact.id} contact={contact}/>)
             }
         </div>
     )

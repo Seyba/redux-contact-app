@@ -7,7 +7,7 @@ export  function ContactList(props) {
     return(
         <div>
             {
-                contacts.map(contact => <ContactItem key={contact.id} contact={contact}/>)
+                contacts?.map(contact => <ContactItem key={contact.id} contact={contact}/>)
             }
         </div>
     )

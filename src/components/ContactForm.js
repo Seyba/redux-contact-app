@@ -7,6 +7,7 @@ export const ContactForm = () => {
     const dispatch = useDispatch()
     const navigate  = useNavigate()
     
+    const [formError, setFormError] = useState("")
 
     const [formData, setFormData] = useState({
         name:"",
@@ -21,12 +22,14 @@ export const ContactForm = () => {
             [e.target.name]: e.target.value
         })
     }
-    const cts = localStorage.getItem('contacts')
-    console.log(cts)
+
     const handleSubmit = e => {
         e.preventDefault()
-
-        dispatch(addContact(formData.name, formData.phone, formData.email, formData.address))
+        if(!formData.name && !formData.phone && !formData.address) {
+            setFormError('Please fill all the fields')
+        } else {
+            dispatch(addContact(formData.name, formData.phone, formData.email, formData.address))
+        }
         
         setFormData({
             name:"",
@@ -45,9 +48,9 @@ export const ContactForm = () => {
             <div>
                 {
                     
-                    (!formData.name && !formData.address && !formData.phone) &&
-                    <div className="text-red-400 text-sm">
-                        Please fill all the fields.
+                    
+                    <div className="text-red-600 text-sm">
+                        {formError}
                     </div>
                 }
             </div>

@@ -39,6 +39,10 @@ export const ContactSearch = () => {
                 )
             }
         </div>
+        <div  className="flex justify-between">
+            <Link to="/">Add Contact</Link>
+            <Link to="/contacts/create">Add Contact</Link>
+        </div>
     </div>
   )
 }

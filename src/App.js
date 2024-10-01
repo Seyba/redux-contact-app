@@ -11,6 +11,7 @@ import { EditContactPage } from './pages/EditContactPage';
 import { ContactPage } from './pages/ContactPage';
 import { CreateContactPage } from './pages/CreateContactPage';
 import { ContactDetails } from './components/ContactDetails';
+import { ContactSearch } from './pages/ContactSearch';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path='/contacts/edit/:id' element={<EditContactPage />}/>
         <Route path="/contacts/:id" element={<ContactDetails/>}/>
         <Route path='/contacts/create' element={<CreateContactPage/>}/>
+        <Route path='/contacts/search' element={<ContactSearch/>}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes> 
     </div>

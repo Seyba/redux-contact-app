@@ -37,7 +37,7 @@ export const ContactForm = () => {
             email:"",
             address:""
         })
-
+        localStorage.setItem('contacts', JSON.stringify(formData))
         navigate('/')
     }
     return(

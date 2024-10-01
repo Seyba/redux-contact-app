@@ -7,9 +7,6 @@ export const HomePage = () => {
     const contacts = useSelector(state => state.contacts)    
     const [searchBarVal, setSearchBarVal] = useState('')
     const [searchContact, setSearchContact] = useState(contacts)
-
-    
-
     
     const handleSearchChange = e => {
         setSearchBarVal(e.target.value)
@@ -21,7 +18,7 @@ export const HomePage = () => {
     //console.log(dContacts)
     return(
         <div>
-            <form>
+            {/* <form>
                 <div className="mt-8">
                     <input 
                         onChange={handleSearchChange}
@@ -32,8 +29,8 @@ export const HomePage = () => {
                     />
                 </div>
                 
-            </form>
-            <div>
+            </form> */}
+            {/* <div>
                 {
                     searchContact.map(contact => {
                         return (    <ul>
@@ -43,7 +40,7 @@ export const HomePage = () => {
                         }
                     )
                 }
-            </div>
+            </div> */}
             <div className="flex justify-between">
                 <div>Search Contact</div>
                 <div>

@@ -39,9 +39,9 @@ export const ContactSearch = () => {
                 )
             }
         </div>
-        <div  className="flex justify-between">
-            <Link to="/">Add Contact</Link>
-            <Link to="/contacts/create">Add Contact</Link>
+        <div  className="mt-8 flex justify-between">
+            <Link className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8" to="/contacts/create">Add Contact</Link>
+            <Link className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8" to="/">Cancel</Link>
         </div>
     </div>
   )

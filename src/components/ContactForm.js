@@ -42,7 +42,7 @@ export const ContactForm = () => {
     }
     return(
         <div className="px-2 py-4">
-            <div className="text-center text-xl font-semibold leading-7">
+            <div className="mb-4 text-center text-xl font-semibold leading-7">
                 <h5>Create New Contact</h5>
             </div>
             <div>
@@ -91,8 +91,9 @@ export const ContactForm = () => {
                     onChange={handleChange}
                     placeholder="address"
                 />
-                <div className="mt-2 text-center">
-                    <button className=" block w-1/4 bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-sm px-4">Create</button>
+                <div className="mt-4 flex justify-between">
+                    <button className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8">Create</button>
+                    <Link to="/" className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8">Cancel</Link>
                 </div>
             </form>
         </div>

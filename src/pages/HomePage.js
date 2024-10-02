@@ -9,8 +9,8 @@ export const HomePage = () => {
     return(
         <div>
             
-            <div className="flex justify-between">
-                <Link to="/contacts/search">Search Contact</Link>
+            <div className="flex justify-between mt-4">
+                <Link className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8 text-sm" to="/contacts/search">Search Contact</Link>
                 <div>
                     <Link to="/contacts/create" className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
                         Add Contact

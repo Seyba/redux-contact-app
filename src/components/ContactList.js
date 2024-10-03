@@ -22,7 +22,7 @@ export  function ContactList(props) {
     },[])
     console.log(contactData, 'data from api')
     return(
-        <div>
+        <div className="divide-y divide-gray-300">
             {
                 contactData? contactData.map(contact => <ContactItem key={contact.id} contact={contact}/>) : <h3>Loading ...</h3>
 

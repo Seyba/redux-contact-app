@@ -19,13 +19,15 @@ const contactsSlice = createSlice({
             const { payload } = action
             state.push(payload)
         },
-        prepare(name, phone, email, address){
+        prepare(name, phone, email, address, city, job){
             return{
                 payload : {
                     name,
                     phone,
                     email,
                     address,
+                    city,
+                    job,
                     id: nanoid(),
                     created_at: new Date().toISOString()
                 }

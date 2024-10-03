@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export function ContactItem(props){
     const contacts = useSelector(state => state.contacts)
-    const { name, email, address, phone, id  } = props.contact
+    const { name, email, address, phone, id, city, job  } = props.contact
     console.log(address)
   return (
     <ul className="py-4 ">
@@ -20,7 +20,7 @@ export function ContactItem(props){
             <Link to={`/contacts/${id}`}>
               <div>
                 <h3>{name}</h3>
-                <h4>{address.city}</h4>
+                <h4>{job}</h4>
               </div>
             </Link>
           </div>

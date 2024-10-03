@@ -13,7 +13,9 @@ export const ContactForm = () => {
         name:"",
         phone:"",
         email:'',
-        address:''
+        address:'',
+        city:'',
+        job:''
     })
     
     const handleChange = e => {
@@ -35,7 +37,9 @@ export const ContactForm = () => {
             name:"",
             phone:"",
             email:"",
-            address:""
+            address:"",
+            city:"",
+            job:""
         })
         localStorage.setItem('contacts', JSON.stringify(formData))
         navigate('/')
@@ -90,6 +94,25 @@ export const ContactForm = () => {
                     value={formData.address}
                     onChange={handleChange}
                     placeholder="address"
+                />
+
+                <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">City</label>
+                <input 
+                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                    placeholder="city"
+                />
+                <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Job</label>
+                <input 
+                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    type="text"
+                    name="job"
+                    value={formData.job}
+                    onChange={handleChange}
+                    placeholder="job"
                 />
                 <div className="mt-4 flex justify-between">
                     <button className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8">Create</button>

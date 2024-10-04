@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 export const EditContactPage = () => {
   return (
     <div>
-        <Link to="/">Cancel</Link>
         <EditForm/>
     </div>
   )

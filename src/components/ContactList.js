@@ -29,7 +29,7 @@ export  function ContactList(props) {
             }
             
             {
-                contacts?.map(contact => <ContactItem key={contact.id} contact={contact}/>)
+                contacts.length? contacts.map(contact => <ContactItem key={contact.id} contact={contact}/>) : <h3>You have no contact. </h3>
             }
         </div>
     )

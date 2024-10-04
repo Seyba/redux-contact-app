@@ -12,7 +12,7 @@ export const ContactDetails = props => {
 
     const contacts = useSelector(state => state.contacts)
     const contact = contacts.find(contact => contact.id === id)
-    const { name, phone, email, address} = contact
+    const { name, phone, email, address, city, job} = contact
     
     const nameInitial = name.split('')[0]
 
@@ -45,13 +45,21 @@ export const ContactDetails = props => {
                 <h4 className="text-xs font-bold">Email</h4>
                 <h4 className="text-blue-700">{email}</h4>
             </div>
-            <div className="bg-white mx-1 px-2 py-3 rounded-md">
+            <div className="bg-white mx-1 mb-3 px-2 py-3 rounded-md">
                 <h4 className="text-xs font-bold">Address</h4>
                 <h4 className="text-blue-700">{address}</h4>
             </div>
+            <div className="bg-white mx-1 mb-3 px-2 py-3 rounded-md">
+                <h4 className="text-xs font-bold">City</h4>
+                <h4 className="text-blue-700">{city}</h4>
+            </div>
+            <div className="bg-white mx-1 px-2 py-3 rounded-md">
+                <h4 className="text-xs font-bold">Job</h4>
+                <h4 className="text-blue-700">{job}</h4>
+            </div>
         </div>
         <div>
-            <button className="text-red-700" onClick={removeContact}>delete</button>
+            <button className="text-red-700" onClick={removeContact}>Delete</button>
         </div>
         
     </div>

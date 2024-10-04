@@ -46,7 +46,8 @@ export const ContactForm = () => {
     }
     return(
         <div className="px-2 py-4">
-            <div className="mb-4 text-center text-xl font-semibold leading-7">
+            <div className=" text-center text-2xl font-bold mt-8 leading-7">
+            
                 <h5>Create New Contact</h5>
             </div>
             <div>

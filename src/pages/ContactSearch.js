@@ -6,16 +6,20 @@ export const ContactSearch = () => {
     const contacts = useSelector(state => state.contacts)    
     const [searchBarVal, setSearchBarVal] = useState('')
     const [searchContact, setSearchContact] = useState(contacts)
-    
+
     const handleSearchChange = e => {
         setSearchBarVal(e.target.value)
+
         const filterSearch = contacts.filter(
             contact => contact.name.toLowerCase().includes(searchBarVal.toLowerCase())
-        )
+        ) 
+
         setSearchContact(filterSearch)
     }
-  return (
+
+    return (
     <div>
+        <h3 className="text-2xl font-bold text-center mt-8">Search Contact</h3>
         <form>
             <div className="mt-8">
                 <input 
@@ -30,13 +34,15 @@ export const ContactSearch = () => {
         </form>
         <div>
             {
-                searchContact.map(contact => {
+                searchContact.length? searchContact.map(contact => {
+                    const { id } = contact
                     return (    <ul>
-                            <li className="text-blue-700">{contact.name}</li>
+                            <li className="text-blue-700">
+                                <Link to={`/contacts/${id}`}>{contact.name}</Link>
+                            </li>
                         </ul>)
-                    
                     }
-                )
+                ) : <h3>No contact found!</h3>
             }
         </div>
         <div  className="mt-8 flex justify-between">

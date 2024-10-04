@@ -25,7 +25,7 @@ export const EditForm = () => {
 
     return (
         <div>
-            <h3 className="text-2xl text-center pt-8">Update Contact</h3>
+            <h3 className="text-2xl font-bold text-center mt-8">Update Contact</h3>
             <form onSubmit={handleSubmit}>
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Name</label>
                 <input 

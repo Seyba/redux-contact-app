@@ -30,7 +30,7 @@ export const ContactForm = () => {
         if(!formData.name && !formData.phone && !formData.address) {
             setFormError('Please fill all the fields')
         } else {
-            dispatch(addContact(formData.name, formData.phone, formData.email, formData.address))
+            dispatch(addContact(formData.name, formData.phone, formData.email, formData.address, formData.city, formData.job))
         }
         
         setFormData({
@@ -51,7 +51,6 @@ export const ContactForm = () => {
             </div>
             <div>
                 {
-                    
                     
                     <div className="text-red-600 text-sm">
                         {formError}

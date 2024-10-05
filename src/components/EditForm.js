@@ -88,8 +88,8 @@ export const EditForm = () => {
 
                     {
                         (formData.name && formData.email && formData.phone && formData.address)? 
-                        <button className="bg-blue-700 text-white rounded-sm px-4">Update Contact</button> : 
-                        <button className="bg-gray-200 text-white rounded-sm px-4">Update Contact</button>
+                        <button className="bg-blue-700 text-white rounded-sm px-4">Update</button> : 
+                        <button className="bg-gray-200 text-white rounded-sm px-4">Update</button>
                     }
                 </div>
                 

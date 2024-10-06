@@ -7,8 +7,11 @@ export const HomePage = () => {
     const contacts = useSelector(state => state.contacts)    
     
     return(
-        <div className='fig-grad'>
-            <h3 className="text-2xl font-bold text-center mt-8">Contact List</h3>
+        <div className='fig-grad p-6'>
+            <div className="bg-white shadow-md rounded-lg py-4">
+                <h3 className="text-2xl font-bold text-center">Contact List</h3>
+            </div>
+            
             
             <div className="flex justify-between my-4">
                 <Link className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8 text-sm" to="/contacts/search">Search Contact</Link>

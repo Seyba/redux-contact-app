@@ -21,12 +21,12 @@ export  function ContactList(props) {
         getContact()
     },[])
     return(
-        <div className="divide-y divide-gray-300">
+        <div className="bg-white shadow-md rounded-lg px-4 divide-y divide-gray-300">
             {
                 contactData? contactData.map(contact => <ContactItem key={contact.id} contact={contact}/>) : <h3>Loading ...</h3>
 
             }
-            
+
             {
                 contacts.length? contacts.map(contact => <ContactItem key={contact.id} contact={contact}/>) : <h3>You have no contact. </h3>
             }

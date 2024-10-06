@@ -20,7 +20,6 @@ export  function ContactList(props) {
         }
         getContact()
     },[])
-    console.log(contactData, 'data from api')
     return(
         <div className="divide-y divide-gray-300">
             {

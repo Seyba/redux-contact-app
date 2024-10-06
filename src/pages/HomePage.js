@@ -7,7 +7,7 @@ export const HomePage = () => {
     const contacts = useSelector(state => state.contacts)    
     
     return(
-        <div>
+        <div className='fig-grad'>
             <h3 className="text-2xl font-bold text-center mt-8">Contact List</h3>
             
             <div className="flex justify-between my-4">

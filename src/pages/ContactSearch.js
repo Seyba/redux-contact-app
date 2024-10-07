@@ -26,7 +26,7 @@ export const ContactSearch = () => {
                 <div className="mt-8">
                     <input 
                         onChange={handleSearchChange}
-                        className="bg-gray-100 py-4 w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                        className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                         type="text"
                         name={searchBarVal}
                         placeholder="search contact"
@@ -38,14 +38,44 @@ export const ContactSearch = () => {
                 {
                     searchContact.length? searchContact.map(contact => {
                         const { id } = contact
+                        const x = contact.name.split(' ')
+
+                        const firstnameInitial = () => {
+                            if(x.length > 2) {
+                                const xa = x[1].split(' ')
+                                const xaInit = xa[0][0]
+                                return xaInit
+                            } else {
+                                const xa = x[0].split(' ')
+                                const xaInit = xa[0][0]
+                                return xaInit
+                            }
+                        }
+                        const lastnameInitial = () => {
+                            if(x.length > 2) {
+                                const xa = x[2].split(' ')
+                                const xaInit = xa[0][0]
+                                return xaInit
+                            } else {
+                                const xa = x[1].split(' ')
+                                const xaInit = xa[0][0]
+                                return xaInit
+                            }
+                        }
+                        const initialOfFirstName = firstnameInitial()
+                        const initialOfLastname = lastnameInitial()
+                        const contactInitials = `${initialOfFirstName}${initialOfLastname}`
+                        
                         return (    
-                            <ul>
+                            <ul key={contact.id}>
                                 <div className="flex justify-between items-center">
                                     <li className="text-blue-700">
                                         <Link to={`/contacts/${id}`}>{contact.name}</Link>
                                     </li>
                                     <Link to={`/contacts/${id}`}>
-                                        <h3 className="fig-accentBlue-light fig-blue-txt p-3 font-bold my-2 rounded-full ">GR</h3>
+                                        <h3 className="fig-accentBlue-light fig-blue-txt p-3 font-bold my-2 rounded-full ">
+                                            {contactInitials}
+                                        </h3>
                                     </Link>
                                 </div>
                                 

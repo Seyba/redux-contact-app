@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 export const EditContactPage = () => {
   return (
-    <div>
-        <EditForm/>
+    <div className="fig-grad">
+      <EditForm/>
     </div>
   )
 }

@@ -21,3 +21,15 @@ code {
   background-color:#EBEBF9;
   /* background-image: linear-gradient(to top, #f6f7fB, #0346f2 ); */
 } 
+.fig-blue {
+  background-color: #0346F2;
+}
+.fig-blue-txt {
+  color: #0346F2;
+}
+.fig-light-gray {
+  background-color: #E7E9F0;
+}
+.fig-accentBlue-light {
+  background-color: #F2F5FE;
+}

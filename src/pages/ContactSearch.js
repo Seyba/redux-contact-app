@@ -82,7 +82,10 @@ export const ContactSearch = () => {
                                 
                             </ul>)
                         }
-                    ) : <h3>No contact found!</h3>
+                    ) : <div className="py-8">
+                        <h3 className=" fig-blue-txt text-xl font-semibold my-2 leading-7 ">No such contact is found!</h3>
+                    </div>
+                    
                 }
             </div>
             <div className="sm:flex sm:justify-between block mt-8">

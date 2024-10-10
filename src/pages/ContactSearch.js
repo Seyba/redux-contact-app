@@ -19,11 +19,12 @@ export const ContactSearch = () => {
 
     return (
     <div className='fig-grad p-8'>
-        <div className="bg-white p-8 rounded-md shadow-md">
+        <div className="bg-white py-8 px-4 rounded-xl shadow-md">
 
-            <h3 className="text-2xl font-bold text-center mt-8">Search Contact</h3>
+            <h3 className="fig-blue-txt font-semibold text-2xl text-center mt-8">Search Contact</h3>
             <form>
                 <div className="mt-8">
+                    
                     <input 
                         onChange={handleSearchChange}
                         className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
@@ -73,7 +74,7 @@ export const ContactSearch = () => {
                                         <Link to={`/contacts/${id}`}>{contact.name}</Link>
                                     </li>
                                     <Link to={`/contacts/${id}`}>
-                                        <h3 className="fig-accentBlue-light fig-blue-txt p-3 font-bold my-2 rounded-full ">
+                                        <h3 className="fig-accentBlue-light fig-blue-txt p-2 font-bold my-2 rounded-full ">
                                             {contactInitials}
                                         </h3>
                                     </Link>
@@ -84,10 +85,15 @@ export const ContactSearch = () => {
                     ) : <h3>No contact found!</h3>
                 }
             </div>
-            <div  className="mt-8 flex justify-between">
-                <Link className="fig-blue hover:bg-blue-500 text-white py-2 rounded-md px-8" to="/contacts/create">Add Contact</Link>
-                <Link className="fig-blue hover:bg-blue-500 text-white py-2 rounded-md px-8" to="/">Cancel</Link>
+            <div className="sm:flex sm:justify-between block mt-8">
+                <div className="fig-blue text-center hover:bg-blue-600 text-white sm:px-10 rounded-md py-2">
+                    <Link to="/contacts/create" >Create</Link>
+                </div>
+                <div className="fig-blue sm:px-10 sm:mt-0 mt-2 text-center hover:bg-blue-600 text-white rounded-md py-2">
+                    <Link to="/">Cancel</Link>
+                </div>
             </div>
+            
         </div>
     </div>
   )

@@ -46,10 +46,8 @@ export const ContactForm = () => {
     }
     return(
         <div className="px-2 py-4">
-            <div className=" text-center text-2xl font-bold mt-8 leading-7">
             
-                <h5>Create New Contact</h5>
-            </div>
+            <h3 className="fig-blue-txt font-semibold text-2xl text-center mt-8">Create New Contact</h3>
             <div>
                 {
                     
@@ -114,9 +112,13 @@ export const ContactForm = () => {
                     onChange={handleChange}
                     placeholder="job"
                 />
-                <div className="mt-4 flex justify-between">
-                    <button className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8">Create</button>
-                    <Link to="/" className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8">Cancel</Link>
+                <div className="sm:flex sm:justify-between block mt-8">
+                    <div className="fig-blue text-center hover:bg-blue-600 text-white sm:px-10 rounded-md py-2">
+                        <button to="/contacts/create" >Create</button>
+                    </div>
+                    <div className="fig-blue sm:px-10 sm:mt-0 mt-2 text-center hover:bg-blue-600 text-white rounded-md py-2">
+                        <Link to="/">Cancel</Link>
+                    </div>
                 </div>
             </form>
         </div>

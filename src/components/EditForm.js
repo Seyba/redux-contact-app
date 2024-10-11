@@ -24,12 +24,12 @@ export const EditForm = () => {
     }
 
     return (
-        <div>
-            <h3 className="text-2xl font-bold text-center mt-8">Update Contact</h3>
+        <div className="bg-white py-8 px-4 rounded-xl shadow-md">
+            <h3 className="fig-blue-txt font-semibold text-2xl text-center mt-8">Update Contact</h3>
             <form onSubmit={handleSubmit}>
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Name</label>
                 <input 
-                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                     type="text"
                     name="name"
                     value={formData.name}
@@ -39,7 +39,7 @@ export const EditForm = () => {
 
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Phone Number</label>
                 <input 
-                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                     type="number"
                     name="phone"
                     value={formData.phone}
@@ -48,7 +48,7 @@ export const EditForm = () => {
                 />
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Email</label>
                 <input 
-                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                     type="text"
                     name="email"
                     value={formData.email}
@@ -57,7 +57,7 @@ export const EditForm = () => {
                 />
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Address</label>
                 <input 
-                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                     type="text"
                     name="address"
                     value={formData.address}
@@ -66,7 +66,7 @@ export const EditForm = () => {
                 />
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">City</label>
                 <input 
-                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                     type="text"
                     name="city"
                     value={formData.city}
@@ -76,24 +76,29 @@ export const EditForm = () => {
 
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Job</label>
                 <input 
-                    className="block w-full rounded-sm border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                    className="fig-accentBlue-light py-3 mb-2 w-full rounded-md border-0 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                     type="text"
                     name="job"
                     value={formData.job}
                     onChange={handleChange}
                     placeholder="Job"
                 />
-                <div className="py-4 flex justify-between">
-                    <Link className="bg-blue-700 text-white rounded-sm px-4" to="/">Cancel</Link>
-
+                
+                <div className="sm:flex sm:justify-between block mt-8">
+                    <div className="fig-blue text-center hover:bg-blue-600 text-white sm:px-10 rounded-md py-2">
+                        <Link to="/" >Cancel</Link>
+                    </div>
                     {
                         (formData.name && formData.email && formData.phone && formData.address)? 
-                        <button className="bg-blue-700 text-white rounded-sm px-4">Update</button> : 
-                        <button className="bg-gray-200 text-white rounded-sm px-4">Update</button>
-                    }
+                    
+                        <button className="fig-blue sm:px-10 sm:mt-0 mt-2 text-center hover:bg-blue-600 text-white rounded-md py-2">    
+                            Update
+                        </button>:
+                        <button className="bg-slate-50 sm:px-10 sm:mt-0 mt-2 text-center hover:slate-100 text-white rounded-md py-2">    
+                            Update
+                        </button>
+                    }    
                 </div>
-                
-                
             </form>
         </div>
     )

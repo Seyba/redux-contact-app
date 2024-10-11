@@ -114,7 +114,7 @@ export const ContactForm = () => {
                     />
                     <div className="sm:flex sm:justify-between block mt-8">
                         <div className="fig-blue text-center hover:bg-blue-600 text-white sm:px-10 rounded-md py-2">
-                            <button to="/contacts/create" >Create</button>
+                            <button>Create</button>
                         </div>
                         <div className="fig-blue sm:px-10 sm:mt-0 mt-2 text-center hover:bg-blue-600 text-white rounded-md py-2">
                             <Link to="/">Cancel</Link>

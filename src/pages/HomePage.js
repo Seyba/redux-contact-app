@@ -7,7 +7,7 @@ export const HomePage = () => {
     const contacts = useSelector(state => state.contacts)    
     
     return(
-        <div className='fig-grad p-12'>
+        <div className='fig-grad p-8'>
             <div className="bg-white shadow-md rounded-lg py-4">
                 <h3 className="text-2xl font-bold text-center">Contact List</h3>
             </div>

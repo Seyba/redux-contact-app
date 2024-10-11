@@ -21,14 +21,14 @@ export const ContactDetails = props => {
         navigate('/')
     }
   return (
-    <div className="py-8">
-        <div className="bg-gray-300 py-4 px-2">
+    <div className="fig-grad p-8">
+        <div className="bg-white py-8 px-4 rounded-xl shadow-md">
             <div className="flex justify-between">
                 <Link className="" to="/">Home</Link>
                 <Link to={`/contacts/edit/${id}`}>Edit</Link>
             </div>
             <div className="flex justify-center my-4">
-                <div className="bg-gray-400 w-20 h-20 rounded-full">
+                <div className="w-20 h-20 rounded-full  fig-blue font-bold my-2 rounded-full">
                     <h5 className="text-center text-4xl text-white pt-4">{nameInitial}</h5>
                 </div>
             </div>

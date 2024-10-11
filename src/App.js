@@ -16,27 +16,6 @@ import { ContactSearch } from './pages/ContactSearch';
 function App() {
   return (
     <div className="mx-auto md:w-2/4 w-full">
-      {/* <SideNav/> */}
-      
-      {/* <Panel/> */}
-      
-      {/* <div className="container bg-slate-400 px-4">
-        <h2>Hello</h2>
-        <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
-      </div>
-      <div className="container bg-slate-100">
-        <div className="container bg-slate-200">
-          <h2>Hello</h2>
-          <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
-        </div>
-        <div className="container bg-slate-400">
-          <h2>Hello</h2>
-          <p>cont lkjslkjd slkjdflj lkjsdlkfj</p>
-        </div>
-      </div> */}
-
-      
-
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/contacts/edit/:id' element={<EditContactPage />}/>

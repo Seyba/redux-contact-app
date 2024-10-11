@@ -3,8 +3,8 @@ import { ContactForm } from '../components/ContactForm'
 
 export const CreateContactPage = () => {
   return (
-    <div>
-        <ContactForm/>
+    <div className="fig-grad p-8">
+      <ContactForm/>
     </div>
   )
 }

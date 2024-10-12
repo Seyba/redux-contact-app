@@ -33,29 +33,29 @@ export const ContactDetails = props => {
                 </div>
             </div>
             <div>
-                <h5 className="text-white my-3 text-center text-4xl ">{name}</h5>
+                <h5 className="fig-blue-txt my-3 font-light text-center text-3xl ">{name}</h5>
             </div>
         </div>
-        <div className="bg-zinc-100 py-8 my-2">
-            <div className="bg-white mx-1 mb-3 px-2 py-3 rounded-md">
+        <div className="mt-4">
+            <div className="bg-white mb-3 px-2 py-4 rounded-xl shadow-md">
                 <h4 className="text-xs font-bold ">Phone</h4>
-                <h4 className="text-blue-700">{phone}</h4>
+                <h4 className="fig-blue-txt">{phone}</h4>
             </div>
-            <div className="bg-white mx-1 mb-3 px-2 py-3 rounded-md">
+            <div className="bg-white mb-3 px-2 py-4 rounded-xl shadow-md">
                 <h4 className="text-xs font-bold">Email</h4>
-                <h4 className="text-blue-700">{email}</h4>
+                <h4 className="fig-blue-txt">{email}</h4>
             </div>
-            <div className="bg-white mx-1 mb-3 px-2 py-3 rounded-md">
+            <div className="bg-white mb-3 px-2 py-4 rounded-xl shadow-md">
                 <h4 className="text-xs font-bold">Address</h4>
-                <h4 className="text-blue-700">{address}</h4>
+                <h4 className="fig-blue-txt">{address}</h4>
             </div>
-            <div className="bg-white mx-1 mb-3 px-2 py-3 rounded-md">
+            <div className="bg-white mb-3 px-2 py-4 rounded-xl shadow-md">
                 <h4 className="text-xs font-bold">City</h4>
-                <h4 className="text-blue-700">{city}</h4>
+                <h4 className="fig-blue-txt">{city}</h4>
             </div>
-            <div className="bg-white mx-1 px-2 py-3 rounded-md">
+            <div className="bg-white px-2 py-4 rounded-xl shadow-md">
                 <h4 className="text-xs font-bold">Job</h4>
-                <h4 className="text-blue-700">{job}</h4>
+                <h4 className="fig-blue-txt">{job}</h4>
             </div>
         </div>
         <div>

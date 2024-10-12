@@ -24,8 +24,8 @@ export const ContactDetails = props => {
     <div className="fig-grad p-8">
         <div className="bg-white py-8 px-4 rounded-xl shadow-md">
             <div className="flex justify-between">
-                <Link className="" to="/">Home</Link>
-                <Link to={`/contacts/edit/${id}`}>Edit</Link>
+                <Link className="text-white fig-blue rounded-xl py-1 px-6 hover:bg-blue-600" to="/">Home</Link>
+                <Link className="text-white fig-blue rounded-xl py-1 px-6 hover:bg-blue-600" to={`/contacts/edit/${id}`}>Edit</Link>
             </div>
             <div className="flex justify-center my-4">
                 <div className="w-20 h-20 rounded-full  fig-blue font-bold my-2 rounded-full">
@@ -58,8 +58,8 @@ export const ContactDetails = props => {
                 <h4 className="fig-blue-txt">{job}</h4>
             </div>
         </div>
-        <div>
-            <button className="text-red-700" onClick={removeContact}>Delete</button>
+        <div className="mt-4 ">
+            <button className="text-white fig-blue rounded-xl py-1 px-6 hover:bg-blue-600" onClick={removeContact}>Delete</button>
         </div>
         
     </div>

@@ -15,7 +15,7 @@ import { ContactSearch } from './pages/ContactSearch';
 
 function App() {
   return (
-    <div className="mx-auto md:w-2/4 w-full">
+    <div className="mx-auto mt-10 md:w-2/4 w-full">
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/contacts/edit/:id' element={<EditContactPage />}/>

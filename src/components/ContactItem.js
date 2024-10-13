@@ -8,7 +8,6 @@ export function ContactItem(props){
     console.log(address)
   return (
     <ul className="py-4 ">
-      
       <div className="flex justify-between">
         <div className="flex justify-between items-center">
           <div className="pr-4">
@@ -19,14 +18,14 @@ export function ContactItem(props){
           <div className="">
             <Link to={`/contacts/${id}`}>
               <div>
-                <h3 className="text-blue-900 text-2xl font-semibold ">{name}</h3>
+                <h3 className="fig-blue-txt md:text-2xl text-lg font-semibold ">{name}</h3>
                 <h4 className="text-md">{job}</h4>
                 <h5 className="text-sm font-semibold">{city}</h5>
               </div>
             </Link>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="md:flex hidden md:justify-between md:items-center">
           <div>
             <div className="border border-2 p-1 hover:border-gray-300 border-black rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">    
@@ -49,7 +48,6 @@ export function ContactItem(props){
             </div>
           </div>
         </div>
-        
       </div>
     </ul>
   )

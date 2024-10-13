@@ -18,7 +18,7 @@ export function ContactItem(props){
           <div className="">
             <Link to={`/contacts/${id}`}>
               <div>
-                <h3 className="fig-blue-txt md:text-2xl text-lg font-semibold ">{name}</h3>
+                <h3 className="fig-blue-txt md:text-xl text-lg font-semibold ">{name}</h3>
                 <h4 className="text-md">{job}</h4>
                 <h5 className="text-sm font-semibold">{city}</h5>
               </div>

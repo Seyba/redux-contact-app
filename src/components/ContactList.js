@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { ContactItem } from './ContactItem'
+import { Link } from 'react-router-dom'
 
 export  function ContactList(props) {
     const contacts = useSelector(state => state.contacts)
@@ -22,6 +23,7 @@ export  function ContactList(props) {
     },[])
     return(
         <div className="bg-white shadow-md rounded-lg px-4 divide-y divide-gray-300">
+            
             {
                 contactData? contactData.map(contact => <ContactItem key={contact.id} contact={contact}/>) : <h3>Loading ...</h3>
 

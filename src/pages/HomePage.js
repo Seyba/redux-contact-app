@@ -8,17 +8,21 @@ export const HomePage = () => {
     
     return(
         <div className='fig-grad p-8'>
-            <div className="bg-white shadow-md rounded-lg py-4">
-                <h3 className="text-2xl font-bold text-center">Contact List</h3>
-            </div>
             
-            
-            <div className="flex justify-between my-4">
-                <Link className="bg-blue-700 hover:bg-blue-500 text-white py-2 rounded-md px-8 text-sm" to="/contacts/search">Search Contact</Link>
-                <div>
-                    <Link to="/contacts/create" className="bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
-                        Add Contact
-                    </Link>
+            <div className="bg-white shadow-md rounded-lg mb-4 py-4">
+
+                <div className="text-center">
+                    <h3 className="fig-blue-txt font-semibold text-2xl py-4">Contact List</h3>
+                </div>
+                <div className="my-4 px-4 sm:flex sm:justify-between block">
+                    <div className="fig-blue text-center hover:bg-blue-600 text-white sm:px-10 rounded-md py-2">
+                        <Link  to="/contacts/search">Search</Link>
+                    </div>
+                    <div className="fig-blue sm:px-10 sm:mt-0 mt-2 text-center hover:bg-blue-600 text-white rounded-md py-2">
+                        <Link to="/contacts/create" >
+                            Create
+                        </Link>
+                    </div>
                 </div>
             </div>
             <ContactList/>

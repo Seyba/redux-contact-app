@@ -1,11 +1,11 @@
-import { useState} from 'react'
 import { ContactList } from '../components/ContactList'
 import { Link } from 'react-router-dom'
 import { useSelector} from 'react-redux'
 
-export const HomePage = () => {
-    const contacts = useSelector(state => state.contacts)    
+export const HomePage = (props) => {
     
+    const contacts = useSelector(state => state.contacts)    
+
     return(
         <div className='fig-grad p-8'>
             
@@ -24,6 +24,7 @@ export const HomePage = () => {
                         </Link>
                     </div>
                 </div>
+                
             </div>
             <ContactList/>
         </div>

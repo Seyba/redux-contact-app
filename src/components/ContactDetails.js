@@ -35,7 +35,7 @@ export const ContactDetails = props => {
                 <Link className="text-white fig-blue rounded-xl py-1 px-6 hover:bg-blue-600" to="/">Home</Link>
                 <Link className="text-white fig-blue rounded-xl py-1 px-6 hover:bg-blue-600" to={`/contacts/edit/${id}`}>Edit</Link>
             </div>
-            <div className="flex justify-center my-4">
+            <div className="flex justify-center my-4 animate-bounce">
                 <div className="w-20 h-20 rounded-full  fig-blue font-bold my-2 rounded-full">
                     <h5 className="text-center text-4xl text-white pt-4">{nameInitial}</h5>
                 </div>
@@ -104,7 +104,7 @@ export const ContactDetails = props => {
                                         Remove Contact
                                     </Dialog.Title>
                                     <div className="mt-2">
-                                        <p className="text-sm fig-blue-txt leading-5 py-2">
+                                        <p className="text-gray-600 text-base leading-5 py-2">
                                         Are you sure you want to delete this contact?
                                         This action cannot be undone.
                                         </p>
@@ -122,7 +122,7 @@ export const ContactDetails = props => {
                             </button>
                             <button
                                 type="button"
-                                className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                                className="mt-3 inline-flex w-full justify-center rounded-md fig-blue px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-600 sm:mt-0 sm:w-auto"
                                 onClick={() => setOpen(false)}
                                 ref={cancelButtonRef}
                             >

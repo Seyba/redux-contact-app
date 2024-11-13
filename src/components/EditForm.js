@@ -24,7 +24,7 @@ export const EditForm = () => {
     }
 
     return (
-        <div className="bg-white py-8 px-4 rounded-xl shadow-md">
+        <div className="bg-white py-8 px-4 rounded-xl shadow-md animate-fade-up animate-once animate-ease-out">
             <h3 className="fig-blue-txt font-semibold text-2xl text-center mt-8">Update Contact</h3>
             <form onSubmit={handleSubmit}>
                 <label className="mb-2 block text-sm font-medium leading-6 text-gray-900">Name</label>

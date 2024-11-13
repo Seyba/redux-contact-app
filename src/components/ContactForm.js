@@ -46,7 +46,7 @@ export const ContactForm = () => {
     }
     return(
         <div className="">
-            <div className="bg-white py-8 px-4 rounded-xl shadow-md">
+            <div className="bg-white py-8 px-4 rounded-xl shadow-md animate-fade-down animate-once animate-duration-1000 animate-ease-linear">
                 <h3 className="fig-blue-txt font-semibold text-2xl text-center mt-8">Create New Contact</h3>
                 <div>
                     {

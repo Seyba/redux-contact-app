@@ -12,7 +12,6 @@ export  function ContactList(props) {
             try{
                 const res = await fetch('https://jsonplaceholder.typicode.com/users')
                 const resJson = await res.json()
-                console.log(resJson)
                 setContactData(resJson)
             }catch(e){
                 console.log(e)

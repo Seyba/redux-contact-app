@@ -12,7 +12,6 @@ export const ContactDetails = props => {
     const {id} = useParams()
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const history = useNavigate()
 
     const contacts = useSelector(state => state.contacts)
     const contact = contacts.find(contact => contact.id === id)

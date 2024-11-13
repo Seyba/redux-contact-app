@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 export function ContactItem(props){
     const contacts = useSelector(state => state.contacts)
     const { name, email, address, phone, id, city, job  } = props.contact
-    console.log(address)
   return (
     <ul className="py-4 ">
       <div className="flex justify-between">
